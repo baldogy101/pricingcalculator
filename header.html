@@ -1,9 +1,31 @@
 <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+  <div class="nav-container">
+    <div class="logo">
+      <h2>Atlassian Logo Here</h2>
+    </div>
+
+    <nav class="nav-links">
+      <!-- Dropdown 1 -->
+      <div class="dropdown">
+        <button id="btn1" class="dropdownbtn">Calculator</button>
+        <div class="ddContent">
+          <a href="javascript:void(0);" onclick="loadPage('h05_main')">Tier Pricing</a>
+          <a href="javascript:void(0);" onclick="loadPage('h05_main2')">Mid Term Upgrade</a>
+          <a href="javascript:void(0);" onclick="loadPage('h05_main3')">Other</a>
+        </div>
+      </div>
+
+      <!-- Dropdown 2 -->
+      <div class="dropdown">
+        <button id="btn2" class="dropdownbtn">Tools</button>
+        <div class="ddContent">
+          <a href="http://go/gsac" target="_blank">GSAC</a>
+          <a href="http://go/ada" target="_blank">ADA</a>
+          <a href="http://go/cassi" target="_blank">CASSI</a>
+          <a href="http://go/ccpac" target="_blank">CCP</a>
+          <a href="http://go/confluence" target="_blank">Confluence</a>
+        </div>
+      </div>
     </nav>
+  </div>
 </header>
