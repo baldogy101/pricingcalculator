@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Calculator</title>
-    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.css">
+    <title>Subscription Pricing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="header">THIS IS THE HEADER</div>
-    
-    <div class="container py-4">
-        <div id="main">THIS IS THE MAIN</div>
-    </div>
 
-    <div id="footer">THIS IS THE FOOTER</div>
+    <h2>Subscription Pricing Calculator</h2>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/frontend.js') }}"></script>
+    <label for="numUsers">Number of Users:</label>
+    <input type="number" id="numUsers" min="1" value="1">
+
+    <label for="tierSelect">Subscription Tier:</label>
+    <select id="tierSelect">
+        <option value="basic">Basic - $10/user</option>
+        <option value="pro">Pro - $20/user</option>
+        <option value="enterprise">Enterprise - $30/user</option>
+    </select>
+
+    <label for="duration">Subscription Duration (Months):</label>
+    <input type="number" id="duration" min="1" value="1">
+
+    <button id="calculateBtn">Calculate Price</button>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
