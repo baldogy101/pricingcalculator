@@ -7,6 +7,76 @@ body {
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
+
+/* --- navigation styling --- */
+
+header, footer{
+  color: white;
+}
+
+footer{
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for navigation */
+.nav-container {
+  display: flex;
+  justify-content: space-between; /* Separates logo & navigation */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Button styling */
+.dropdownbtn {
+  background-color: #007bff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.ddContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style dropdown links */
+.ddContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effects */
+.ddContent a:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown when hovering over the correct button */
+.dropdown:hover .ddContent {
+  display: block;
+}
+
+/* Change button color when hovered */
+.dropdown:hover .dropdownbtn {
+  background-color: darkblue;
+}
+/* --- navigation styling --- */
+
 h2 {
     text-align: center;
 }
