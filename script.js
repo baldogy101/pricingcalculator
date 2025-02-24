@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading header:", error));
 
-    loadPage("main.html"); // Load default content
+    loadPage("main"); // Load default content
 });
 
 // Function to load main content dynamically
