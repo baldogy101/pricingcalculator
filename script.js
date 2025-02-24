@@ -1,13 +1,38 @@
-// Load Header
+// Load Header and Attach Events
 document.addEventListener("DOMContentLoaded", function () {
     fetch("header.html")
         .then(response => response.text())
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
+            attachDropdownListeners(); // Attach event listeners after loading header
         })
         .catch(error => console.error("Error loading header:", error));
+
+    loadPage("h05_main"); // Load default content
 });
 
+// Function to load main content dynamically
+function loadPage(page) {
+    fetch(`${page}.html`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("main-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error(`Error loading ${page}.html:`, error));
+}
+
+// Attach event listeners to dropdown links after header loads
+function attachDropdownListeners() {
+    document.querySelectorAll(".ddContent a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent any unwanted link navigation
+            const page = this.getAttribute("onclick").match(/'([^']+)'/)[1]; // Extract page name
+            loadPage(page);
+        });
+    });
+}
+
+// calculator
 let pricingData = {};
 const exchangeRates = {
     "USD": 1,
