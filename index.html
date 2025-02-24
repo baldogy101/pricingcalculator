@@ -13,21 +13,29 @@
     
     <h2>Subscription Pricing Calculator</h2>
 
-    <label for="numUsers">Number of Users:</label>
-    <input type="number" id="numUsers" min="1" value="1">
-
-    <label for="tierSelect">Subscription Tier:</label>
-    <select id="tierSelect">
-        <option value="basic">Basic - $10/user</option>
-        <option value="pro">Pro - $20/user</option>
-        <option value="enterprise">Enterprise - $30/user</option>
-    </select>
-
+    <label for="productSelect">Select Product:</label>
+    <select id="productSelect"></select>
+    
+    <label for="tierSelect">Select User Tier:</label>
+    <select id="tierSelect"></select>
+    
     <label for="duration">Subscription Duration (Months):</label>
-    <input type="number" id="duration" min="1" value="1">
-
+    <select id="duration">
+        <option value="1">1 Month</option>
+        <option value="3">3 Months (-5%)</option>
+        <option value="6">6 Months (-10%)</option>
+        <option value="12">12 Months (-15%)</option>
+    </select>
+    
+    <label for="currencySelect">Select Currency:</label>
+    <select id="currencySelect">
+        <option value="USD">USD ($)</option>
+        <option value="EUR">EUR (€)</option>
+        <option value="GBP">GBP (£)</option>
+    </select>
+    
     <button id="calculateBtn">Calculate Price</button>
-
+    
     <div id="result"></div>
 
     <script src="script.js"></script>
